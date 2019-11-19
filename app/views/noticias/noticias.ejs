@@ -3,31 +3,25 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Not�cias</title>
+	<title>Notícias</title>
 </head>
 
 <body>
 
-	<h1>Not�cias</h1>
+	<h1>Notícias</h1>
 
 	<table>
 		<tr>
 			<th>Id</td>
 			<th>Titulo</td>
-			<th>Noticia</td>
+			<th>Notícia</td>
 		</tr>
 
 		<% for(var i=0; i < noticias.length; i++) { %>
 		<tr>
-			<td>
-				<%= noticias[i].id_noticia %>
-			</td>
-			<td>
-				<%= noticias[i].titulo %>
-			</td>
-			<td>
-				<%= noticias[i].noticia %>
-			</td>
+			<td><%= noticias[i].id_noticia %></td>
+			<td><%= noticias[i].titulo %></td>
+			<td style="margin-left: 50px;"><%= noticias[i].noticia %></td>
 		</tr>
 		<% } %>
 
