@@ -1,6 +1,11 @@
+function Noticias(connection){
+    this._connection = connection;
+}
+
+Noticias.prototype.getNoticias = function(callback) {
+    this._connection.query('select * from noticias', callback);
+};
+
 module.exports = function() {
-    this.getNoticias = function(connection, callback) {
-        connection.query('select * from noticias', callback);
-    };
-    return this;
+    return Noticias;
 }
