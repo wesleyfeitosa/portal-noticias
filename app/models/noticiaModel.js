@@ -7,7 +7,6 @@ Noticia.prototype.getNoticia = function(id, callback){
 }
 
 Noticia.prototype.salvarNoticia = function(noticia, callback){
-    console.log(noticia);
     // inserindo dados no banco através do set onde funciona como um de método de orm 
     this._connection.query(`insert into noticias set ? `, noticia, callback);    
 }
