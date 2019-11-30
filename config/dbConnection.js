@@ -10,5 +10,6 @@ var connMySQL = function(){
 }
 
 module.exports = function () {
+    console.log('conexão feita com sucesso!');
     return connMySQL;
 }
