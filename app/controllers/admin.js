@@ -24,6 +24,9 @@ module.exports.noticias_salvar = function (application, req, res) {
     var noticiaModel = new application.app.models.noticiaModel(connection); // model de noticia
 
     noticiaModel.salvarNoticia(noticia, (error, result) => {
+        if(error){
+            console.log(error);
+        }
         res.redirect("/noticias"); // após a inserção da notícia é feito o redirecionamento para a página de notícias
     }); // toda requisição feita com POST é importante fazer o redirect no final para evitar o reenvio do formulário ao apertar F5.
 }
