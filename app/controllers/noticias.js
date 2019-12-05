@@ -6,6 +6,7 @@ module.exports.noticias = function (application, req, res) {
         if(error){
             console.log(error);
         }
+        connection.end();
         res.render('noticias/noticias', { noticias: result });
         // res.send(result);
     });
@@ -19,6 +20,7 @@ module.exports.noticia = function (application, req, res) {
         if(error){
             console.log(error);
         }
+        connection.end();
         res.render('noticias/noticia', { noticia: result });
         // res.send(result);
     })

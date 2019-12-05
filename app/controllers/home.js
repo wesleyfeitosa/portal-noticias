@@ -6,6 +6,7 @@ module.exports.index = function(application, req, res){
         if(error){
             console.log(error);
         }
+        connection.end();
         res.render("home/index", { noticias: result });
     });
 
