@@ -9,6 +9,7 @@ app.set('views', './app/views');
 
 app.use(express.static('./app/public')); // leva os asrquivos estaticos para a raiz do projeto
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 app.use(expressValidator());
 
 consign() // carrega automaticamente os módulos da nossa aplicação
