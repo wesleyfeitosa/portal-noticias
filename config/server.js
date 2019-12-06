@@ -12,11 +12,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(expressValidator());
 
-consign({cwd: process.cwd()+"/"}) // carrega automaticamente os módulos da nossa aplicação
+consign({cwd: process.cwd()+"/app"}) // carrega automaticamente os módulos da nossa aplicação
     .include('config/dbConnection.js')
-    .then('app/controllers') // os controllers da aplicação
-    .then('app/models') // os models da aplicação
-    .then('app/routes') // sempre deixa as rotas por último para evitar bugs
+    .then('controllers') // os controllers da aplicação
+    .then('models') // os models da aplicação
+    .then('routes') // sempre deixa as rotas por último para evitar bugs
     .into(app); // insere dentro do app do express
 
 module.exports = app;
