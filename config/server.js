@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(expressValidator());
 
 consign({cwd: process.cwd()+"/app"}) // carrega automaticamente os módulos da nossa aplicação
-    .include('config/dbConnection.js')
+    .include('../config/dbConnection.js')
     .then('controllers') // os controllers da aplicação
     .then('models') // os models da aplicação
     .then('routes') // sempre deixa as rotas por último para evitar bugs
